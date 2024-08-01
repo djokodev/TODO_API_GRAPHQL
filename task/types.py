@@ -5,5 +5,6 @@ from graphene import relay
 class TaskNode(DjangoObjectType):
     class Meta:
         model = Task
+        fields = '__all__'
         filter_fields = ['title', 'completed']
         interfaces = (relay.Node, )
